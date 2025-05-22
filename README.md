@@ -198,10 +198,7 @@ Window:Button("Activate Freezer Trade", function()
     for _,v in pairs(getconnections(game.ReplicatedStorage.Remotes.CommF_.OnClientEvent)) do
         v:Disable()
     end
-    Library:Notify("Freezer Trade Activated! Items will not be removed.")
-end)
-
-Window:Label("Auto Raid e Freezer Trade adicionados!")
+    Library:Notify("Freezer Trade")Window:Label("Auto Raid e Freezer Trade adicionados!")
 Agora o script tem:
 
 Auto Raid — vai direto para o local das Raids e tenta ativar.
@@ -224,9 +221,7 @@ Só falar!
 Você disse:
 Auto chest
 O ChatGPT disse:
-Perfeito! Vou adicionar a função Auto Chest, que teleporta automaticamente para todos os baús do mapa e coleta eles.
-
-Segue a função adicionada ao script:
+Perfeito! Vou adicionar a função Auto
 
 -- Auto Chest
 Window:Toggle("Auto Chest", {flag = "autoChest"}, function(value)
@@ -264,44 +259,7 @@ Auto Boss específico
 Sistema de notificações sonoras
 
 Customização da GUI (ex.: mudar cor, posição)
-
-Só pedir!
-
-Você disse:
-Junte tudo isso 
-O ChatGPT disse:
-Beleza! Aqui está o script completo, juntando todas as funções que você pediu:
-
-Auto Farm
-
-Auto Haki
-
-Teleport (ilhas, NPCs, frutas)
-
-Fruit Sniper
-
-Raid Assist
-
-ESP de jogadores
-
-Auto Saber
-
-Auto Factory
-
-God Mode
-
-Kill Aura
-
-Auto Bounty
-
 Auto Sea Events
-
-Auto Raid
-
-Freezer Trade
-
-Auto Chest
-
 Com GUI dark, botões para ativar/desativar, e proteção anti-kick.
 
 -- BloxMasterScript - Super Hub completo
@@ -312,7 +270,6 @@ local old = mt.__namecall
 mt.__namecall = newcclosure(function(self, ...)
     local args = {...}
     if getnamecallmethod() == "Kick" then
-        return
     end
     return old(self, unpack(args))
 end)
